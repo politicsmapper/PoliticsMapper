@@ -42,8 +42,8 @@ public class Main {
 	    String xmlToString = stringBuilder.toString();
 	    System.out.println(xmlToString);
 	    try {
-			JSONObject soapDatainJsonObject = XML.toJSONObject(xmlToString);
-			System.out.println(soapDatainJsonObject);
+			JSONObject xmlToJSON = XML.toJSONObject(xmlToString);
+			System.out.println(xmlToJSON);
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
