@@ -40,6 +40,7 @@ public class Main {
 			System.out.println(xmlToJson(xmlString));
 		} catch (IOException exception) {
 			System.out.println("Something went wrong");
+			System.out.println(exception);
 		}
 		
 		

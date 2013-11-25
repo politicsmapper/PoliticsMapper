@@ -3,7 +3,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="json-lib-2.4-jdk15.jar"/>
-	<classpathentry kind="lib" path="xom-1.2.10.jar"/>
 	<classpathentry kind="lib" path="java-json.jar"/>
+	<classpathentry kind="lib" path="xom-1.2.10.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
