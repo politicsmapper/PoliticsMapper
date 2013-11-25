@@ -34,7 +34,7 @@ public class Main {
 		 * Note: elastic search cluster running on politicsmapper.cloudapp.net port: 9200
 		 */
 		
-		convertAndPostFilesFromPathToURL("/Users/esben/Downloads/debates/", "http://google.com");	    
+		convertAndPostFilesFromPathToURL("/Users/esben/Downloads/debates/", "http://politicsmapper.cloudapp.net:9200/debates/");	    
 	}
 	
 	private static JSONObject xmlToJson(String xmlString)
@@ -70,7 +70,10 @@ public class Main {
 		for (int i=0;i<files.length;i++){
 			if (files[i].isFile()){
 				try {
-					postJSON(xmlToJson(readXMLFile(files[i])), url);
+					String indexString = Integer.toString(i);
+					JSONObject json = xmlToJson(readXMLFile(files[i]));
+					System.out.println(json.toString());
+					postJSON(json, url.concat(indexString));
 					System.out.printf("%d%%\n", (int)(((i+1)/(double)files.length)*100.0));
 					//System.out.println(xmlToJson(readXMLFile(files[i])));
 				} catch (IOException e) {
@@ -88,7 +91,7 @@ public class Main {
 	{
 		Response postResponse =
 				ClientBuilder.newClient().target(url).request(MediaType.APPLICATION_JSON_TYPE)
-		                .post(Entity.entity(json.toString(), MediaType.APPLICATION_JSON_TYPE));
+		                .put(Entity.entity(json.toString(), MediaType.APPLICATION_JSON_TYPE));
 		
 		System.out.println(postResponse.getStatus());
 		System.out.println(postResponse.readEntity(String.class));
