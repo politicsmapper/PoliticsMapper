@@ -1,4 +1,5 @@
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -29,6 +30,11 @@ public class Main {
 		//String xml = "";
 		//XMLSerializer xmlSerializer = new XMLSerializer();  
 		//JSON json = xmlSerializer.read(xml);
+		
+		File path = new File("C:/Useres/Anuz?Desktop/xml");
+		File[] files = path.listFiles();
+		
+		
 		try {
 			String xmlString = readXMLFile("C:/Users/Anuz/Desktop/primary-toc.xml");
 			System.out.println(xmlToJson(xmlString));
