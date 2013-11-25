@@ -31,17 +31,15 @@ public class Main {
 		//XMLSerializer xmlSerializer = new XMLSerializer();  
 		//JSON json = xmlSerializer.read(xml);
 		
-		File path = new File("C:/Useres/Anuz?Desktop/xml");
-		File[] files = path.listFiles();
+		processFilesInFolder("C:/Users/Anuz/Desktop/xml");
 		
-		
-		try {
-			String xmlString = readXMLFile("C:/Users/Anuz/Desktop/primary-toc.xml");
+		/*try {
+			String xmlString = readXMLFile("C:/Users/Anuz/Desktop/xml/primary-toc.xml");
 			System.out.println(xmlToJson(xmlString));
 		} catch (IOException exception) {
 			System.out.println("Something went wrong");
 			System.out.println(exception);
-		}
+		}*/
 		
 		
 	    
@@ -59,7 +57,7 @@ public class Main {
 		return null;
 	}
 	
-	private static String readXMLFile(String path) throws IOException
+	private static String readXMLFile(File path) throws IOException
 	{
 		BufferedReader reader = new BufferedReader( new FileReader (path));
 	    StringBuilder stringBuilder = new StringBuilder();
@@ -71,5 +69,24 @@ public class Main {
 	    }
 	    reader.close();
 	    return stringBuilder.toString();
+	}
+	
+	private static void processFilesInFolder(String path)
+	{
+		File xmlPath = new File(path);
+		File[] files = xmlPath.listFiles();
+		for (int i=0;i<files.length;i++){
+			if (files[i].isFile()){
+				try {
+					System.out.println(xmlToJson(readXMLFile(files[i])));
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+			}
+			
+			
+		}
 	}
 }
