@@ -4,6 +4,14 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.Entity;
+import javax.ws.rs.client.WebTarget;
+import javax.ws.rs.core.Form;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+
 import org.json.XML;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -11,7 +19,6 @@ import org.json.JSONObject;
 import net.sf.json.JSON;
 import net.sf.json.JSONSerializer;
 import net.sf.json.xml.XMLSerializer;
-
 
 @SuppressWarnings("unused")
 public class Main {
@@ -27,22 +34,7 @@ public class Main {
 		 * Note: elastic search cluster running on politicsmapper.cloudapp.net port: 9200
 		 */
 		
-		//String xml = "";
-		//XMLSerializer xmlSerializer = new XMLSerializer();  
-		//JSON json = xmlSerializer.read(xml);
-		
-		processFilesInFolder("C:/Users/Anuz/Desktop/xml");
-		
-		/*try {
-			String xmlString = readXMLFile("C:/Users/Anuz/Desktop/xml/primary-toc.xml");
-			System.out.println(xmlToJson(xmlString));
-		} catch (IOException exception) {
-			System.out.println("Something went wrong");
-			System.out.println(exception);
-		}*/
-		
-		
-	    
+		convertAndPostFilesFromPathToURL("/Users/esben/Downloads/debates/", "http://google.com");	    
 	}
 	
 	private static JSONObject xmlToJson(String xmlString)
@@ -71,14 +63,16 @@ public class Main {
 	    return stringBuilder.toString();
 	}
 	
-	private static void processFilesInFolder(String path)
+	private static void convertAndPostFilesFromPathToURL(String path, String url)
 	{
 		File xmlPath = new File(path);
 		File[] files = xmlPath.listFiles();
 		for (int i=0;i<files.length;i++){
 			if (files[i].isFile()){
 				try {
-					System.out.println(xmlToJson(readXMLFile(files[i])));
+					postJSON(xmlToJson(readXMLFile(files[i])), url);
+					System.out.printf("%d%%\n", (int)(((i+1)/(double)files.length)*100.0));
+					//System.out.println(xmlToJson(readXMLFile(files[i])));
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -88,5 +82,15 @@ public class Main {
 			
 			
 		}
+	}
+	
+	private static void postJSON(JSONObject json, String url) 
+	{
+		Response postResponse =
+				ClientBuilder.newClient().target(url).request(MediaType.APPLICATION_JSON_TYPE)
+		                .post(Entity.entity(json.toString(), MediaType.APPLICATION_JSON_TYPE));
+		
+		System.out.println(postResponse.getStatus());
+		System.out.println(postResponse.readEntity(String.class));
 	}
 }
