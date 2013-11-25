@@ -15,7 +15,7 @@ import net.sf.json.xml.XMLSerializer;
 @SuppressWarnings("unused")
 public class Main {
 	
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 		
 		/* Todo: 
 		 * 
@@ -29,8 +29,32 @@ public class Main {
 		//String xml = "";
 		//XMLSerializer xmlSerializer = new XMLSerializer();  
 		//JSON json = xmlSerializer.read(xml);
+		try {
+			String xmlString = readXMLFile("C:/Users/Anuz/Desktop/primary-toc.xml");
+			System.out.println(xmlToJson(xmlString));
+		} catch (IOException exception) {
+			System.out.println("Something went wrong");
+		}
 		
-		BufferedReader reader = new BufferedReader( new FileReader ("C:/Users/Anuz/Desktop/primary-toc.xml"));
+		
+	    
+	}
+	
+	private static JSONObject xmlToJson(String xmlString)
+	{
+		try {
+			JSONObject xmlToJSON = XML.toJSONObject(xmlString);
+			return xmlToJSON;
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace(); 
+		}
+		return null;
+	}
+	
+	private static String readXMLFile(String path) throws IOException
+	{
+		BufferedReader reader = new BufferedReader( new FileReader (path));
 	    StringBuilder stringBuilder = new StringBuilder();
 	    String line = null;
 	    String lineSeparator = System.getProperty("line.separator");
@@ -39,16 +63,6 @@ public class Main {
 	        stringBuilder.append(line);   
 	    }
 	    reader.close();
-	    String xmlToString = stringBuilder.toString();
-	    System.out.println(xmlToString);
-	    try {
-			JSONObject xmlToJSON = XML.toJSONObject(xmlToString);
-			System.out.println(xmlToJSON);
-		} catch (JSONException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	    
+	    return stringBuilder.toString();
 	}
-
 }
