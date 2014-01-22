@@ -1,0 +1,5 @@
+elasticsearch==0.4.4
+## FIXME: could not find svn URL in dependency_links for this package:
+elementtree==1.2.6-20050316
+urllib3==1.7.1
+wsgiref==0.1.2
