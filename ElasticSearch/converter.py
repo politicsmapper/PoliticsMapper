@@ -1,4 +1,7 @@
-import elementtree.ElementTree as ET
+try:
+    import xml.etree.cElementTree as ET
+except ImportError:
+    import xml.etree.ElementTree as ET
 
 def flatten(elem, include_tags=True, include_tail=0):
     text = elem.text or ""
