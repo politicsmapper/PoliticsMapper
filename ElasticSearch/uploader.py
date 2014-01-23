@@ -1,13 +1,15 @@
 from elasticsearch import Elasticsearch
 from debates import convertDebateFile
 import os
+import sys
 
-host = "politicsmapper.cloudapp.net:9200"
-#host = "localhost:9200"
+#host = "politicsmapper.cloudapp.net:9200"
+host = "localhost:9200"
 es = Elasticsearch([host])
 
 def process(datapath):
     files = os.listdir(datapath)
+    files.sort()
     for f in files:
 
         filepath = os.path.join(datapath, f)
@@ -33,4 +35,5 @@ def bulkActionSourceList(debates):
 
     return bulkActionSource
 
-process("data/scrapedxml/debates/")
+if __name__ == "__main__":
+    process(sys.argv[1])
