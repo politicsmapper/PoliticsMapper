@@ -4,12 +4,12 @@ var deploy = require('./deploy').deploy;
 
 // Parse command line arguments
 program
-  .command('* <path> [port]')
+  .command('* <path>')
   .description('deploy given script')
   .action(function(path, options){
     
     // Create server and start it
-    http.createServer(function (req, res) {
+    var server = http.createServer(function (req, res) {
 
       parseRequestBody(req, function (body) {
 
@@ -37,8 +37,17 @@ program
 
     }).listen(program.port);
 
+    server.on('error', function (e) {
+      if (e.code == 'EADDRINUSE') {
+        console.log('Port is already in use.');
+      }
+      else {
+        throw e;
+      }
+    });
+
     console.log('"%s" is being deployed', path);
-    console.log('Listening for deploy triggers at http://127.0.0.1:%j/', program.port);
+    console.log('Start listening for deploy triggers at http://127.0.0.1:%j/', program.port);
 
   });
 
