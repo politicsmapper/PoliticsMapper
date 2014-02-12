@@ -35,7 +35,7 @@ program
         }
       });
 
-    }).listen(program.port, '127.0.0.1');
+    }).listen(program.port);
 
     console.log('"%s" is being deployed', path);
     console.log('Listening for deploy triggers at http://127.0.0.1:%j/', program.port);
@@ -63,3 +63,4 @@ function parseRequestBody(request, callback) {
     callback(data);
   });
 }
+
