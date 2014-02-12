@@ -1,33 +1,67 @@
-var http = require('http');
-var program = require('commander');
 var exec = require('child_process').exec;
+var dirname = require('path').dirname;
 
-// Parse command line arguments
-program
-  .command('* <path>')
-  .description('deploy given script')
-  .option('-p, --port [number]', 'Port number. Default 3000', 3000)
-  .action(function(path, arguments){
-    
-    // Create server and start it
-    http.createServer(function (req, res) {
-      res.writeHead(200, {'Content-Type': 'text/plain'});
-      res.end('RECEIVED\n');
+exports.deploy = function (path, deploySuccess) {
 
-      console.log(req);
-    }).listen(arguments.port, '127.0.0.1');
+  execute('cd ' + dirname(path), function(error, stdout, stderr) {
+    // Directory not found
+    if (error) {
+      deploySuccess(false, error);
+    } 
+    else {
+      execute('forever stop ' + path, function (error, stdout, stderr) {
+        // Failed to stop app
+        if (error) {
+          deploySuccess(false, error);
+        }
+        else {
+          execute('git pull origin master', function (error, stdout, stderr) {
+            // Failed to pull
+            if (error) {
+              execute('forever start ' + path, function (error, stdout, stderr) {
+                // Failed to restart
+                if (error) {
+                  console.log('FAILED TO RESTART APP AFTER FAILED PULL! %s', error);
+                }
+              });
+              deploySuccess(false, error);
+            }
+            else {
+              execute('npm install', function (error, stdout, stderr) {
+                // Failed to install dependencies
+                if (error) {
+                  console.log('npm install failed. Trying to start server anyway %s', error);
+                }
 
-    console.log('"%s" is being deployed', path);
-    console.log('Listening for deploy triggers at http://127.0.0.1:%d/', arguments.port);
-
+                execute('forever start ' + path, function (error, stdout, stderr) {
+                  if (error) {
+                    console.log('FAILED TO RESTART APP! %s', error);
+                    deploySuccess(false, error);
+                  }
+                  else {
+                    deploySuccess(true, null);
+                  }
+                });
+              });
+            }
+          });
+        }
+      });
+    }
   });
+};
 
-program.parse(process.argv);
+String.prototype.trim = function() {
+  return this.replace(/^\s+|\s+$/g, "");
+};
 
-/*execute('ls', function (output){
-    console.log(output);
-})*/
-
-function execute(command, callback){
-    exec(command, function(error, stdout, stderr){ callback(stdout); });
+function execute(command, output){
+  console.log(command);
+  exec(command, function(error, stdout, stderr) { 
+    console.log(stdout.trim());
+    if (error) {
+      console.log(stderr.trim());
+    }
+    output(error, stdout, stderr); 
+  });
 };
