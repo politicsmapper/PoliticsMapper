@@ -8,6 +8,11 @@ program
   .description('deploy given script')
   .action(function(path, options){
     
+    // Deploy initially
+    if (program.initial) {
+      performDeploy(path);
+    }
+
     // Create server and start it
     var server = http.createServer(function (req, res) {
 
@@ -19,14 +24,7 @@ program
           res.end('RECEIVED\n');
 
           console.log('Deploying %s. Pushed ref: %s', path, body['ref']);
-          deploy(path, function (success, error) {
-            if (success) {
-              console.log('Deployment successful!');
-            }
-            else {
-              console.log('Deployment failed. %s', error);
-            }
-          });
+          performDeploy(path);
         }
         else {
           // uh oh!  bad json!
@@ -37,6 +35,7 @@ program
 
     }).listen(program.port);
 
+    // Catch exception when port is already in use
     server.on('error', function (e) {
       if (e.code == 'EADDRINUSE') {
         console.log('Port is already in use.');
@@ -53,7 +52,19 @@ program
 
 program
   .option('-p, --port <number>', 'Port number', parseInt, 3000)
+  .option('-i, --initial', 'Pull changes and start server initially')
   .parse(process.argv);
+
+function performDeploy(path) {
+  deploy(path, function (success, error) {
+    if (success) {
+      console.log('Deployment successful!');
+    }
+    else {
+      console.log('Deployment failed. %s', error);
+    }
+  });
+}
 
 function parseRequestBody(request, callback) {
   var body = '';
