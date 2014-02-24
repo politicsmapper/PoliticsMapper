@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1.
+        Results
+    ul
+        each hit, i in hits
+            li 
+                b #{hit._source.date}
+                p #{hit._source.content}
