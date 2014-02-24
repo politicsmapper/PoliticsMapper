@@ -6,5 +6,6 @@ block content
     ul
         each hit, i in hits
             li 
-                b #{hit._source.date}
+                a(href='/similar/' + encodeURIComponent(hit._id))
+                    b #{hit._source.date}
                 p #{hit._source.content}
