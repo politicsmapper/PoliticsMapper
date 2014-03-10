@@ -11,3 +11,9 @@ html
 		link(rel='stylesheet', href='../UserInterface/css/search.css')
 	body
 		block content
+			
+	script
+		$(document).ready(function() {
+		$('#list').click(function(event){event.preventDefault();$('#products .item').addClass('list-group-item');});
+		$('#grid').click(function(event){event.preventDefault();$('#products .item').removeClass('list-group-item');$('#products .item').addClass('grid-group-item');});
+		});
