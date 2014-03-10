@@ -10,7 +10,8 @@ exports.search = function(req, res){
       var hits = body.hits.hits;
       res.render('results', {
                 'hits' : hits,
-                'query' : query
+                'query' : query,
+                'type' : "Search"
             });
     }, function (error) {
       console.trace(error.message);
