@@ -30,36 +30,6 @@ block content
 								.col-xs-12.col-md-offset-4.col-md-4
 									a.btn.btn-success.btn-block(href='#') View
 									a.btn.btn-info.btn-block(href='/similar/' + encodeURIComponent(hit._id)) Similar
-script
-	$("#menu-close").click(function(e) {
-	e.preventDefault();
-	$("#sidebar-wrapper").toggleClass("active");
-	});
-script
-	$("#menu-toggle").click(function(e) {
-		e.preventDefault();
-		$("#sidebar-wrapper").toggleClass("active");
-	});
-script
-	$(function() {
-		$('a[href*=#]:not([href=#])').click(function() {
-			if (location.pathname.replace(/^\\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-				var target = $(this.hash);
-				target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-				if (target.length) {
-					$('html,body').animate({
-						scrollTop: target.offset().top
-					}, 1000);
-					return false;
-				}
-			}
-		});
-	});
-script
-	$(document).ready(function() {
-		$('#list').click(function(event){event.preventDefault();$('#products .item').addClass('list-group-item');});
-		$('#grid').click(function(event){event.preventDefault();$('#products .item').removeClass('list-group-item');$('#products .item').addClass('grid-group-item');});
-	});
 
 
 
