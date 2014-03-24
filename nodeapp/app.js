@@ -9,6 +9,7 @@ var search = require('./routes/search');
 var similar = require('./routes/similar');
 var http = require('http');
 var path = require('path');
+var fs = require('fs');
 
 var app = express();
 
@@ -29,10 +30,16 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', routes.index);
+//app.get('/', routes.index);
+
+app.get('/', function(req, res){
+  res.sendfile('index.html');
+});
 /*
 app.get('/', function(req, res){
-  res.render('index.html');
+  fs.readFile(__dirname + '/index.html', 'utf8', function(err, text){
+  	res.send(text);
+  });
 });
 */
 app.get('/search', search.search);
