@@ -30,6 +30,11 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
+/*
+app.get('/', function(req, res){
+  res.render('index.html');
+});
+*/
 app.get('/search', search.search);
 app.get('/similar/:id', similar.list);
 

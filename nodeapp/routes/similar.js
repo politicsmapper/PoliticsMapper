@@ -11,7 +11,9 @@ exports.list = function(req, res){
     }).then(function (body) {
       var hits = body.hits.hits;
       res.render('results', {
-                'hits' : hits
+                'hits' : hits,
+                'query' : id,
+                'type' : "Similarity"
             });
     }, function (error) {
       res.send('Document does not exist');

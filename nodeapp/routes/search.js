@@ -9,7 +9,9 @@ exports.search = function(req, res){
     }).then(function (body) {
       var hits = body.hits.hits;
       res.render('results', {
-                'hits' : hits
+                'hits' : hits,
+                'query' : query,
+                'type' : "Search"
             });
     }, function (error) {
       console.trace(error.message);
