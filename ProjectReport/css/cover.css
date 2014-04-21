@@ -27,7 +27,8 @@ a:hover {
 html,
 body {
   height: 100%;
-  background: url(parliament.jpg);
+  background: url(../img/parliament.jpg);
+  background-position: center;
 }
 body {
   color: #fff;
@@ -113,6 +114,9 @@ body {
 .cover .btn-lg {
   padding: 10px 20px;
   font-weight: bold;
+}
+.cover-heading {
+  font-size: 4em;
 }
 
 
