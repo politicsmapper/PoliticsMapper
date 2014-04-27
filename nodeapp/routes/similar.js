@@ -9,8 +9,6 @@ exports.list = function(req, res){
       type: "debate",
       id: id
     }, function (error, response) {
-      console.log(response["content"])
-      console.log(id)
       client.search({
         index: 'hansard',
         type: 'debate',
@@ -48,7 +46,6 @@ exports.list = function(req, res){
         }
       }).then(function (body) {
         var hits = body.hits.hits;
-        console.log(hits)
         res.render('results', {
                   'hits' : hits,
                   'query' : id,
