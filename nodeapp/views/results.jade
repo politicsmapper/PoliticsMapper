@@ -28,12 +28,12 @@ block content
 								| #{hit._source.content}
 							.row
 								.col-xs-12.col-md-offset-4.col-md-4
-									a.btn.btn-success.btn-block(href='/view/' + encodeURIComponent(hit._source)) View
+									a.btn.btn-success.btn-block(href='/view/' + encodeURIComponent(hit._id)) View
 									a.btn.btn-info.btn-block(href='/similar/' + encodeURIComponent(hit._id)) Similar
-	script
+	script.
 		$(document).ready(function() {
-		$('#list').click(function(event){event.preventDefault();$('#products .item').addClass('list-group-item');});
-		$('#grid').click(function(event){event.preventDefault();$('#products .item').removeClass('list-group-item');$('#products .item').addClass('grid-group-item');});
+			$('#list').click(function(event){event.preventDefault();$('#products .item').addClass('list-group-item');});
+			$('#grid').click(function(event){event.preventDefault();$('#products .item').removeClass('list-group-item');$('#products .item').addClass('grid-group-item');});
 		});
 
 
