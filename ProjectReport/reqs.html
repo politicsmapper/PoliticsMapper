@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="img/favicon.ico">
+
+	<title>Requirements - Politics Mapper</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="bootstrap/dist/js/bootstrap.min.js"></script>
+
+  </head>
+
+  <body>
+	<div class="navbar navbar-inverse navbra-fixed-top">
+	  <div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="/index.html#">Politics Mapper</a>
+	  </div>
+	  <div class="navbar-collapse collapse navbar-inverse-collapse">
+		<ul class="nav navbar-nav">
+		  <li><a href="/main.html#">Home</a></li>
+		  <li class="dropdown active">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Requirements <b class="caret"></b></a>
+			<ul class="dropdown-menu">
+			  <li><a href="/reqs.html#">Introduction</a></li>
+			  <li><a href="/reqs.html#brief">Official Brief</a></li>
+			  <li><a href="/reqs.html#desc">Requirements Description</a></li>
+			  <li><a href="/reqs.html#table">Requirements Table</a></li>
+			</ul>
+		  </li>
+		  <li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Development <b class="caret"></b></a>
+			<ul class="dropdown-menu">
+			  <li><a href="/dev.html#">Introduction</a></li>
+			  <li><a href="/dev.html#plan">Development Plan</a></li>
+			  <li><a href="/dev.html#diagrams">Architectural Diagrams</a></li>
+			  <li><a href="/dev.html#achievements">Technical Achievements</a></li>
+			  <li><a href="/dev.html#patterns">Design Patterns</a></li>
+			  <li><a href="/dev.html#testing">Testing and Evaluation</a></li>
+			</ul>
+		  </li>
+		  <li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Project Management <b class="caret"></b></a>
+			<ul class="dropdown-menu">
+			  <li><a href="/management.html#">Introduction</a></li>
+			  <li><a href="/management.html#management">Management</a></li>
+			  <li class="divider"></li>
+			  <li class="dropdown-header">Work Packages</li>
+			  <li><a href="/management.html#anuz">Anuz Adhikari</a></li>
+			  <li><a href="/management.html#reece">Reece Doyle</a></li>
+			  <li><a href="/management.html#esben">Esben Sörig</a></li>
+			</ul>
+		  </li>
+		  <li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Usability <b class="caret"></b></a>
+			<ul class="dropdown-menu">
+			  <li><a href="/usability.html#">Introduction</a></li>
+			  <li><a href="/usability.html#user">Addressing User Needs</a></li>
+			  <li><a href="/usability.html#heuristic">Heuristic Evaluation</a></li>
+			</ul>
+		  </li>
+		  <li><a href="/sdk.html">SDK</a></li>
+		  <li><a href="http://youtu.be/fHdSRWKLzYQ" class="btn btn-lg">
+                <span class="glyphicon glyphicon-film"></span>
+              </a></li>
+              
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+		  <li><a href="http://politicsmapper.boards.net">Forum</a></li>
+		  <li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Manuals <b class="caret"></b></a>
+			<ul class="dropdown-menu">
+			  <li><a href="/manuals.html#">Introduction</a></li>
+			  <li><a href="/manuals.html#system">System Manual</a></li>
+			  <li><a href="/manuals.html#user">User Manual</a></li>
+			</ul>
+		  </li>
+		</ul>
+	  </div>
+	</div>
+
+	<!-- Content -->
+	<div class="container">
+		<div class="row">
+		    <div class="col-lg-12">
+		    	<div class="page-header" id="banner">
+			      	<h1 class="title">Requirements</h1>
+			      	<p class="lead">By Team 14</p>
+		    	</div>
+		    </div>
+	    </div>
+	    <div class="row">
+		    <div class="well well-sm col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2" style="text-align: center;">
+			    <h1>Introduction</h1>
+			    <p>The planning stage is identified by many as the most important process in the software development process as it is essential for capturing user and client requirements which form the basis of any well-designed fit-for-purpose system. For our project, we were supplied with an official brief by our clients (as shown below) which, through further discussion with them, was altered to fit our development time-frame and the skills/assets at our disposal. In our meetings, we also identified a list of requirements for our systems as shown on this page.</p>
+			</div>
+		</div>
+		<div class="row" id="brief">
+			<div class="col-lg-12">
+				<h2>Official Brief</h2>
+				<div class="col-lg-10 col-lg-offset-1">
+					<blockquote>
+						<p>"Data journalism solution for analysing all of the UK House of Commons debates since 1988. Big data semantics similarity search with Machine Learning APIs"</p>
+					</blockquote>
+					<p>The official brief changed and the machine learning aspect of the project has been take out. We are also including all the debates that have been recorded since 1802 rather than 1988 onwards. Our API will be accessible by the public.</p>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="desc">
+			<div class="col-lg-12">
+				<h2>Requirements Summary</h2>
+				<div class="col-lg-10 col-lg-offset-1">
+					<p>Fundamentally, our system is to be made in the form of a web application and it would be hosted on the web, which would be accessed by users through a web page. Our system has to somehow extract text from the Hansard database and display search results when queried. We also need to provide the public with API, which could be in the form of RESTful or Java API.<br>On top of the fundamental requirements, the system should also provide at least a few important features to provide better usability to the users. The users should be able to search by topic, either by choosing from a given list or by filling a form field. After a search has been performed, the system should also suggest texts that are similar to the one currently presented. The users should also be able to choose the size of the texts being displayed. This can range from individual sentences to whole debates.
+				</div>
+			</div>
+		</div>
+		<div class="row" id="table">
+			<div class="col-lg-12">
+				<h2>Requirements Table</h2>
+				<div class="col-lg-10 col-lg-offset-1">
+					<table class="table table-striped table-hover ">
+					  <thead>
+					    <tr>
+					      <th>Requirement No.</th>
+					      <th>Name</th>
+					      <th>Description</th>
+					      <th>Priority</th>
+					      <th>Functionality</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <td>RQ01</td>
+					      <td>Web-site</td>
+					      <td>The system is to be hosted on the web, being accessed through a web-page</td>
+					      <td>Must-have</td>
+					      <td>Functional</td>
+					    </tr>
+					    <tr>
+					      <td>RQ02</td>
+					      <td>Retrieve Text From Hansard</td>
+					      <td>The systems is to retrieve text from the Hansard online database and then show this data to the user</td>
+					      <td>Must-have</td>
+					      <td>Functional</td>
+					    </tr>
+					    <tr>
+					      <td>RQ03</td>
+					      <td>Create Open-Source API</td>
+					      <td>Wrap the core functionality in an API to let users interact with the data. Either RESTful or Java API</td>
+					      <td>Must-have</td>
+					      <td>Non-Functional</td>
+					    </tr>
+					    <tr>
+					      <td>RQ04</td>
+					      <td>Different-Sized Text Retrieval</td>
+					      <td>The ability to retrieve whole debates, paragraphs or sentences from the Hansard database at the user's request</td>
+					      <td>Should-have</td>
+					      <td>Non-Functional</td>
+					    </tr>
+					    <tr>
+					      <td>RQ05</td>
+					      <td>Browse Data by Topic</td>
+					      <td>Select a topic from a list or search using a form field to retrieve all data relating to the topic</td>
+					      <td>Should-have</td>
+					      <td>Functional</td>
+					    </tr>
+					    <tr>
+					      <td>RQ06</td>
+					      <td>Similarity Suggestions</td>
+					      <td>Suggest similar text from the Hansard database to the one being currently viewed</td>
+					      <td>Should-have</td>
+					      <td>Functional</td>
+					    </tr>
+					    <tr>
+					      <td>RQ07</td>
+					      <td>Graphical Representation</td>
+					      <td>Implementation of tools which allow for a graphical representation of data such as pie-charts of what parties talk about a particular project</td>
+					      <td>Could-have</td>
+					      <td>Non-Functional</td>
+					    </tr>
+					    <tr>
+					      <td>RQ08</td>
+					      <td>Political trend-finding</td>
+					      <td>Retrieve text to find trends of hypocrisy and consistency of political parties</td>
+					      <td>Could-have</td>
+					      <td>Non-Functional</td>
+					    </tr>
+					    <tr>
+					      <td>RQ09</td>
+					      <td>Spell-Checking</td>
+					      <td>Suggests alternate queries if a spelling mistake is detected</td>
+					      <td>Would-have</td>
+					      <td>Non-Functional</td>
+					    </tr>
+					  </tbody>
+					</table> 
+				</div>
+			</div>
+		</div>
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>
