@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="img/favicon.ico">
+
+	<title>Development - Politics Mapper</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/timeline.css" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="bootstrap/dist/js/bootstrap.min.js"></script>
+
+  </head>
+
+  <body>
+	<div class="navbar navbar-inverse navbra-fixed-top">
+	  <div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="/index.html#">Politics Mapper</a>
+	  </div>
+	  <div class="navbar-collapse collapse navbar-inverse-collapse">
+		<ul class="nav navbar-nav">
+		  <li><a href="/main.html#">Home</a></li>
+		  <li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Requirements <b class="caret"></b></a>
+			<ul class="dropdown-menu">
+			  <li><a href="/reqs.html#">Introduction</a></li>
+			  <li><a href="/reqs.html#brief">Official Brief</a></li>
+			  <li><a href="/reqs.html#desc">Requirements Description</a></li>
+			  <li><a href="/reqs.html#table">Requirements Table</a></li>
+			</ul>
+		  </li>
+		  <li class="dropdown active">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Development <b class="caret"></b></a>
+			<ul class="dropdown-menu">
+			  <li><a href="/dev.html#">Introduction</a></li>
+			  <li><a href="/dev.html#plan">Development Plan</a></li>
+			  <li><a href="/dev.html#diagrams">Architectural Diagrams</a></li>
+			  <li><a href="/dev.html#achievements">Technical Achievements</a></li>
+			  <li><a href="/dev.html#patterns">Design Patterns</a></li>
+			  <li><a href="/dev.html#testing">Testing and Evaluation</a></li>
+			</ul>
+		  </li>
+		  <li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Project Management <b class="caret"></b></a>
+			<ul class="dropdown-menu">
+			  <li><a href="/management.html#">Introduction</a></li>
+			  <li><a href="/management.html#management">Management</a></li>
+			  <li class="divider"></li>
+			  <li class="dropdown-header">Work Packages</li>
+			  <li><a href="/management.html#anuz">Anuz Adhikari</a></li>
+			  <li><a href="/management.html#reece">Reece Doyle</a></li>
+			  <li><a href="/management.html#esben">Esben Sörig</a></li>
+			</ul>
+		  </li>
+		  <li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Usability <b class="caret"></b></a>
+			<ul class="dropdown-menu">
+			  <li><a href="/usability.html#">Introduction</a></li>
+			  <li><a href="/usability.html#user">Addressing User Needs</a></li>
+			  <li><a href="/usability.html#heuristic">Heuristic Evaluation</a></li>
+			</ul>
+		  </li>
+		  <li><a href="/sdk.html">SDK</a></li>
+		  <li><a href="http://youtu.be/fHdSRWKLzYQ" class="btn btn-lg">
+				<span class="glyphicon glyphicon-film"></span>
+			  </a></li>
+			  
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+		  <li><a href="http://politicsmapper.boards.net">Forum</a></li>
+		  <li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Manuals <b class="caret"></b></a>
+			<ul class="dropdown-menu">
+			  <li><a href="/manuals.html#">Introduction</a></li>
+			  <li><a href="/manuals.html#system">System Manual</a></li>
+			  <li><a href="/manuals.html#user">User Manual</a></li>
+			</ul>
+		  </li>
+		</ul>
+	  </div>
+	</div>
+
+	<!-- Content -->
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="page-header" id="banner">
+					<h1 class="title">Development</h1>
+					<p class="lead">By Team 14</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="well well-sm col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2" style="text-align: center;">
+				<h1>Introduction</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan nec quam non fringilla. Phasellus nec consectetur nisi. Suspendisse sed nisi laoreet, condimentum mauris vitae, elementum felis. Cras mollis magna placerat ante porttitor semper. In at molestie sem. Phasellus nec enim mi. Pellentesque facilisis aliquet nulla, eget feugiat magna fringilla eu. Donec posuere ligula vitae est fringilla dapibus.</p>
+			</div>
+		</div>
+		<div class="row" id="plan">
+			<div class="col-lg-11">
+				<h2>Development Plan</h2>
+				<div class="col-lg-11 col-lg-offset-1">
+					<h3>Distinct System Partitions</h3>
+					<div class="col-lg-11 col-lg-offset-1">
+						<p>In our first set of meeting with our client, we worked on breaking down the development of our system into distinct modules which could be developed separately from each other. This was not only done for easier delegation of work but also, mainly, for setting clear deadlines and milestones for the development process. We divided our system into three distinct modules, each of which is described in further detail below. </p>
+						<h4>Downloading and indexing the Hansard data</h4>
+						<div class="col-lg-11 col-lg-offset-1">
+							<p>The first step in constructing any information-retrieval system is to gather that information and store it such that it is both quick to access and easily manipulated. As the Hansard records are already accessible on the internet <a href="http://hansard.millbanksystems.com">here</a>, we could have developed an interface for this existing database which would scrape and parse the data from the HTML page and display it to our users.<br>The advantages, however, of downloading these records and indexing it into our own collection of data are that the data retrieval time is much faster and we have greater control over how the data is segmented and, thus, presented.<br>After looking at data storage solutions such as <a href="https://lucene.apache.org/solr/">Apache Solr</a>, <a href="https://lucene.apache.org/">Apache Lucene</a>, <a href="http://en.wikipedia.org/wiki/SQL">SQL</a> and <a href="http://hadoop.apache.org/">Apache Hadoop</a>, we finally settled on using <a href="http://www.elasticsearch.org/">ElasticSearch</a> for its extensive API and its “more like this” search function, the relevance of this we shall explore in the following sections.</p>
+						</div>
+						<h4>Hosting and Segmentation of data</h4>
+						<div class="col-lg-11 col-lg-offset-1">
+							<p>Our ElasticSearch instance is hosted on a Microsoft Azure server and is easily commutable to our client’s (the BBC) server if they were to continue this project. As well as this data and the source code for our web application, this server also contains php scripts to automatically pull the code from our Github repository, ensuring immediate updates of our system.<br>One of the primary requirements of our system is the ability to search through the data as well as providing a measure of similarity between search results; the size and format of these segments of records plays a significant role in this.<br>In requirement RQ04, we stated that we would allow the user to retrieve data of a variety of sizes ranging from individual sentences, paragraphs and whole debates; this, however, was problematic in implementation. We discovered that, due to the often erratic and tangential nature of political debates, the query search would return individual sentences from debates which, as a whole, are not best-fit for the query topic. An example of this could be a query for “David Cameron immigration” which returns a suitable sentence by David Cameron in which he mentions “immigration” but is from a debate which is focussed on the budget. These types of records are common as MPs will often refute another MP’s argument by criticising them ad hominem on another topic - in this case, immigration.<br>In contrast to this, we decided against allowing the user to search by debate as this would display too much information on the search results page and confuse the user as well as crowd the user interface. Our solution to this problem of segmentation size was to display the results as paragraphs but to allow the user to see the context of each paragraph upon clicking them. By only showing the whole debate when each individual result is viewed, the user is not baffled by the vast text but, also, the user is given a taste of the relevance of the debate before having to click.</p>
+						</div>
+						<h4>Querying the data through a user interface</h4>
+						<div class="col-lg-11 col-lg-offset-1">
+							<p>The third module of our system is the web application which controls the user interface through which queries are submitted and results are displayed; it is an essential component in the usability of our system.<br>As mentioned above, we decided to use an ElasticSearch instance to index our data on our server as it offered a “more like this” function as a part of it’s API as well as the standard query function. This mlt function returns records which are syntactically similar to another specific record; the existence of this “more like this” API meant that we know longer had to implement a TF-IDF-style similarity search algorithm and could instead tailor this one to fit our needs.<br>The web-based user interface was built using HTML 5, CSS 3 and <a href="http://getbootstrap.com">Twitter Bootstrap</a> so that it is responsive and easy-to-use on all platforms. We used the <a href="http://jade-lang.com">Jade templating language</a> in conjunction with Bootstrap for displaying the results from our web application which is built using <a "href=http://nodejs.org">Node.js</a> and the <a href="http://expressjs.com">Express.js framework</a>.</p>
+						</div>
+					</div>
+					<h3>Timeline</h3>
+					<div class="row" id="timeline">
+						<div class="col-lg-11 col-lg-offset-1">
+							<div class="container col-lg-12">
+								<ul class="timeline">
+									<li>
+										<div class="timeline-badge primary"><i class="glyphicon glyphicon-comment"></i></div>
+										<div class="timeline-panel">
+											<div class="timeline-heading">
+												<h4 class="timeline-title">First meeting with clients</h4>
+												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> October 2013</small></p>
+											</div>
+											<div class="timeline-body">
+												<p>In this first meeting with Sebastian and Yves, we identified the main audience of our system, discussed the client requirements and were shown useful resources such as the NLP lectures of Chris Manning.</p>
+											</div>
+										</div>
+									</li>
+									<li class="timeline-inverted">
+										<div class="timeline-badge success"><i class="glyphicon glyphicon-book"></i></div>
+										<div class="timeline-panel">
+											<div class="timeline-heading">
+												<h4 class="timeline-title">Neuro-linguistic programming research</h4>
+												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> October 2013</small></p>
+											</div>
+											<div class="timeline-body">
+												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+											</div>
+										</div>
+									</li>
+									<li class="timeline-inverted">
+										<div class="timeline-panel">
+											<div class="timeline-heading">
+												<h4 class="timeline-title">TF-IDF research</h4>
+												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> October 2013</small></p>
+											</div>
+											<div class="timeline-body">
+												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="timeline-badge success"><i class="glyphicon glyphicon-book"></i></div>
+										<div class="timeline-panel">
+											<div class="timeline-heading">
+												<h4 class="timeline-title">Data storage/management solution</h4>
+												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> November 2013</small></p>
+											</div>
+											<div class="timeline-body">
+												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+											</div>
+										</div>
+									</li>
+									<li class="timeline-inverted">
+										<div class="timeline-badge danger"><i class="glyphicon glyphicon-download-alt"></i></div>
+										<div class="timeline-panel">
+											<div class="timeline-heading">
+												<h4 class="timeline-title">XML to JSON converter</h4>
+												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> November 2013</small></p>
+											</div>
+											<div class="timeline-body">
+												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+											</div>
+										</div>
+									</li>
+									<li class="timeline-inverted">
+										<div class="timeline-panel">
+											<div class="timeline-heading">
+												<h4 class="timeline-title">Download and store Hansard data</h4>
+												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> November 2013</small></p>
+											</div>
+											<div class="timeline-body">
+												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="timeline-badge warning"><i class="glyphicon glyphicon-cloud-upload"></i></div>
+										<div class="timeline-panel">
+											<div class="timeline-heading">
+												<h4 class="timeline-title">Hosting of ElasticSearch on Azure</h4>
+												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> November 2013</small></p>
+											</div>
+											<div class="timeline-body">
+												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+											</div>
+										</div>
+									</li>
+									<li class="timeline-inverted">
+										<div class="timeline-badge success"><i class="glyphicon glyphicon-book"></i></div>
+										<div class="timeline-panel">
+											<div class="timeline-heading">
+												<h4 class="timeline-title">User interface research</h4>
+												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> December 2013</small></p>
+											</div>
+											<div class="timeline-body">
+												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="timeline-badge info"><i class="glyphicon glyphicon-user"></i></div>
+										<div class="timeline-panel">
+											<div class="timeline-heading">
+												<h4 class="timeline-title">Development of UI prototype</h4>
+												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> January 2014</small></p>
+											</div>
+											<div class="timeline-body">
+												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+											</div>
+										</div>
+									</li>
+									<li class="timeline-inverted">
+										<div class="timeline-badge danger"><i class="glyphicon glyphicon-wrench"></i></div>
+										<div class="timeline-panel">
+											<div class="timeline-heading">
+												<h4 class="timeline-title">Replacement of conversion code</h4>
+												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> January 2014</small></p>
+											</div>
+											<div class="timeline-body">
+												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="timeline-badge success"><i class="glyphicon glyphicon-book"></i></div>
+										<div class="timeline-panel">
+											<div class="timeline-heading">
+												<h4 class="timeline-title">Web application research</h4>
+												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> January 2014</small></p>
+											</div>
+											<div class="timeline-body">
+												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+											</div>
+										</div>
+									</li>
+									<li class="timeline-inverted">
+										<div class="timeline-badge warning"><i class="glyphicon glyphicon-cloud-upload"></i></div>
+										<div class="timeline-panel">
+											<div class="timeline-heading">
+												<h4 class="timeline-title">Deployment of web application on Azure</h4>
+												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> January 2014</small></p>
+											</div>
+											<div class="timeline-body">
+												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="timeline-badge warning"><i class="glyphicon glyphicon-search"></i></div>
+										<div class="timeline-panel">
+											<div class="timeline-heading">
+												<h4 class="timeline-title">Added URI search functionality</h4>
+												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> February 2014</small></p>
+											</div>
+											<div class="timeline-body">
+												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+											</div>
+										</div>
+									</li>
+									<li class="timeline-inverted">
+										<div class="timeline-badge info"><i class="glyphicon glyphicon-user"></i></div>
+										<div class="timeline-panel">
+											<div class="timeline-heading">
+												<h4 class="timeline-title">Merged UI prototype with web app</h4>
+												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> March 2014</small></p>
+											</div>
+											<div class="timeline-body">
+												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+											</div>
+										</div>
+									</li>
+									<li class="timeline-inverted">
+										<div class="timeline-panel">
+											<div class="timeline-heading">
+												<h4 class="timeline-title">Results page rewitten in Jade</h4>
+												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> March 2014</small></p>
+											</div>
+											<div class="timeline-body">
+												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="timeline-badge info"><i class="glyphicon glyphicon-search"></i></div>
+										<div class="timeline-panel">
+											<div class="timeline-heading">
+												<h4 class="timeline-title">Added querying through the search bar</h4>
+												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> March 2014</small></p>
+											</div>
+											<div class="timeline-body">
+												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+											</div>
+										</div>
+									</li>
+									<li class="timeline-inverted">
+										<div class="timeline-badge success"><i class="glyphicon glyphicon-book"></i></div>
+										<div class="timeline-panel">
+											<div class="timeline-heading">
+												<h4 class="timeline-title">Research into adding a timeline</h4>
+												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> March 2014</small></p>
+											</div>
+											<div class="timeline-body">
+												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="timeline-badge info"><i class="glyphicon glyphicon-user"></i></div>
+										<div class="timeline-panel">
+											<div class="timeline-heading">
+												<h4 class="timeline-title">Development of basic timeline</h4>
+												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> March 2014</small></p>
+											</div>
+											<div class="timeline-body">
+												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="timeline-panel">
+											<div class="timeline-heading">
+												<h4 class="timeline-title">Added view page for individual results</h4>
+												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> April 2014</small></p>
+											</div>
+											<div class="timeline-body">
+												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+											</div>
+										</div>
+									</li>
+									<li class="timeline-inverted">
+										<div class="timeline-badge warning"><i class="glyphicon glyphicon-wrench"></i></div>
+										<div class="timeline-panel">
+											<div class="timeline-heading">
+												<h4 class="timeline-title">Optimisation of search functions</h4>
+												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> April 2014</small></p>
+											</div>
+											<div class="timeline-body">
+												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-11 col-lg-offset-1">
+				<h2 style="text-align: right;">Title 2</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan nec quam non fringilla. Phasellus nec consectetur nisi. Suspendisse sed nisi laoreet, condimentum mauris vitae, elementum felis. Cras mollis magna placerat ante porttitor semper. In at molestie sem. Phasellus nec enim mi. Pellentesque facilisis aliquet nulla, eget feugiat magna fringilla eu. Donec posuere ligula vitae est fringilla dapibus.<br>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce erat ligula, venenatis eget bibendum nec, viverra interdum purus. Nulla nec ipsum eget augue interdum faucibus. Praesent feugiat dui ac odio eleifend semper. Mauris vestibulum lectus ut tortor lacinia consequat. Cras vulputate posuere pretium. Vestibulum faucibus tincidunt facilisis. Curabitur bibendum ultricies nisl, id tristique urna congue et. Suspendisse eget consequat odio. Fusce ornare nulla et lorem interdum ultricies et eu erat. In aliquam vestibulum neque et tincidunt. Suspendisse elementum sapien quis dictum viverra. Suspendisse eget lorem auctor, lacinia arcu ut, volutpat dui. Sed ornare lectus sapien.
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-11">
+				<h2>Title 3</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan nec quam non fringilla. Phasellus nec consectetur nisi. Suspendisse sed nisi laoreet, condimentum mauris vitae, elementum felis. Cras mollis magna placerat ante porttitor semper. In at molestie sem. Phasellus nec enim mi. Pellentesque facilisis aliquet nulla, eget feugiat magna fringilla eu. Donec posuere ligula vitae est fringilla dapibus.<br>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce erat ligula, venenatis eget bibendum nec, viverra interdum purus. Nulla nec ipsum eget augue interdum faucibus. Praesent feugiat dui ac odio eleifend semper. Mauris vestibulum lectus ut tortor lacinia consequat. Cras vulputate posuere pretium. Vestibulum faucibus tincidunt facilisis. Curabitur bibendum ultricies nisl, id tristique urna congue et. Suspendisse eget consequat odio. Fusce ornare nulla et lorem interdum ultricies et eu erat. In aliquam vestibulum neque et tincidunt. Suspendisse elementum sapien quis dictum viverra. Suspendisse eget lorem auctor, lacinia arcu ut, volutpat dui. Sed ornare lectus sapien.
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+</body>
+</html>
