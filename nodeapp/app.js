@@ -30,18 +30,7 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-//app.get('/', routes.index);
-
-app.get('/', function(req, res){
-  res.sendfile('index.html');
-});
-/*
-app.get('/', function(req, res){
-  fs.readFile(__dirname + '/index.html', 'utf8', function(err, text){
-  	res.send(text);
-  });
-});
-*/
+app.get('/', routes.index);
 app.get('/search', search.search);
 app.get('/similar/:id', similar.list);
 
