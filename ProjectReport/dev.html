@@ -142,7 +142,7 @@
 												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> October 2013</small></p>
 											</div>
 											<div class="timeline-body">
-												<p>In this first meeting with Sebastian and Yves, we identified the main audience of our system, discussed the client requirements and were shown useful resources such as the NLP lectures of Chris Manning.</p>
+												<p>In this first meeting with Sebastian and Yves, we identified the main audience of our system, discussed the client requirements and were shown useful resources such as the <a href="https://class.coursera.org/nlp/lecture/preview">NLP lectures of Chris Manning</a>.</p>
 											</div>
 										</div>
 									</li>
@@ -154,7 +154,7 @@
 												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> October 2013</small></p>
 											</div>
 											<div class="timeline-body">
-												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+												<p>After our first meeting, we spent the subsequent couple of weeks researching the field of neuro-linguistic programming as this is used in search engines. Even if we were not going to code these algorithms ourselves, it was important to know the mathematics behind the idea. As well as the lectures mentioned above, <a href="http://nlp.stanford.edu/IR-book/html/htmledition/irbook.html">Introduction to Information Retrieval</a> was very useful.</p>
 											</div>
 										</div>
 									</li>
@@ -165,7 +165,7 @@
 												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> October 2013</small></p>
 											</div>
 											<div class="timeline-body">
-												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+												<p>Having read about term frequency-inverse document frequency in our research of NLP, we continued our research with a narrower scope into this field as it seemed both relevant and useful to us in this project.</p>
 											</div>
 										</div>
 									</li>
@@ -177,7 +177,7 @@
 												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> November 2013</small></p>
 											</div>
 											<div class="timeline-body">
-												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+												<p>The next step in the research for our project was to decide on the way in which we would store and access the data. Originally, we were planning to use Apache Hadoop as it is emerging as one of the best data management platforms but our clients warned us against its use and, instead, pointed us towards other Apache platforms: Lucene and Solr. After researching these, we then discovered ElasticSearch which not only had all of the functionality we wanted from the Apache platforms but also features in-built TF-IDF funtionality.</p>
 											</div>
 										</div>
 									</li>
@@ -189,7 +189,7 @@
 												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> November 2013</small></p>
 											</div>
 											<div class="timeline-body">
-												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+												<p>The first stage in the development of the system was to download the data from the online Hansard resource, as outlined in the <a href="#plan">module</a> above. The Hansard data is downloaded as XML so we needed to convert it to JSON in order to use it with our instance of ElasticSearch. This first attempt at a converter was developed in Java by reading XML objects from a file and then using API methods to convert these objects to JSON objects.</p>
 											</div>
 										</div>
 									</li>
@@ -200,7 +200,7 @@
 												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> November 2013</small></p>
 											</div>
 											<div class="timeline-body">
-												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+												<p>Once this iteration of the XML to JSON converter was completed, we downloaded the Hansard data, ready to index it in our Elastic Search instance.</p>
 											</div>
 										</div>
 									</li>
@@ -212,7 +212,7 @@
 												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> November 2013</small></p>
 											</div>
 											<div class="timeline-body">
-												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+												<p>At this point, we knew on what platform we were going to store the Hansard data and we had converted it to the appropriate format but we yet to decide on a way of making this data available online. We decided to host the ElasticSearch instance on a Microsoft Azure machine as it was free of charge for us as students and is easy to link to our Github repository. We transferred the Hansard files to this server and indexed them into an ElasticSearch instance.</p>
 											</div>
 										</div>
 									</li>
@@ -224,7 +224,7 @@
 												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> December 2013</small></p>
 											</div>
 											<div class="timeline-body">
-												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+												<p>Having developed a minimally functional back-end of the system with the ElasticSearch instance, the next step was to think about the way in which we would implement the web application and, in particular, the user interface. Our clients had emphasize that we focus on functionality of the UI rather than the design so we looked at the Bootstrap framework as it is responsive which is a required attribute of our web application if it is to be accessible on all platforms.</p>
 											</div>
 										</div>
 									</li>
@@ -236,7 +236,7 @@
 												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> January 2014</small></p>
 											</div>
 											<div class="timeline-body">
-												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+												<p>For our user interface prototype, we developed a home page, and search results page with Bootstrap, HTML 5 and CSS 3 as well as some JavaScript. For the results page, we hard-coded dummy results to display the features as we had not yet developed the web application. The home page featured a search bar which directed the user to the dummy search page, regardless of input.</p>
 											</div>
 										</div>
 									</li>
@@ -248,7 +248,7 @@
 												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> January 2014</small></p>
 											</div>
 											<div class="timeline-body">
-												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+												<p>We discovered an issue with the previous Java conversion code: it was incorrectly formatting segments of HTML within the XML that we were converting to JSON. We replaced this code with a Python conversion script as this was more effective and easier to utilise. We then re-downloaded and indexed the Hansard data.</p>
 											</div>
 										</div>
 									</li>
@@ -260,7 +260,7 @@
 												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> January 2014</small></p>
 											</div>
 											<div class="timeline-body">
-												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+												<p>The next stage in the development of the system was to set up a web application to sit between the user interface and the data in the ElasticSearch instance. We started our research by creating basic Node.js applications and exploring the documentation so that we would be confident when it came to developing the web app. We also conducted research into using the Express.js web application framework and using Jade instead of HTML for displaying the data in the user interface.</p>
 											</div>
 										</div>
 									</li>
@@ -272,7 +272,7 @@
 												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> January 2014</small></p>
 											</div>
 											<div class="timeline-body">
-												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+												<p>Having conducted extensive research into developing a web application, we deployed a simjple "Hello World" node app on the Azure machine.</p>
 											</div>
 										</div>
 									</li>
@@ -284,7 +284,7 @@
 												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> February 2014</small></p>
 											</div>
 											<div class="timeline-body">
-												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+												<p>The ElasticSearch instance is now connected to the web application and can be searched by query or similarity through the URI. A query search is of the format: "urltoelasticsearch/&lt;index&gt;/_search?q=querygoeshere" and the similarity search is: "urltoelasticsearch/&lt;index&gt;/&lt;type&gt;/&lt;id&gt;/_mlt"</p>
 											</div>
 										</div>
 									</li>
@@ -296,7 +296,7 @@
 												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> March 2014</small></p>
 											</div>
 											<div class="timeline-body">
-												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+												<p>Added the web pages from the user interface prototype to the web application such that there is an interface for the user but the functionality is still only accessible through the URI and it displayed as JSON.</p>
 											</div>
 										</div>
 									</li>
@@ -307,7 +307,7 @@
 												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> March 2014</small></p>
 											</div>
 											<div class="timeline-body">
-												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+												<p>Converted the HTML user interface prototype into Jade and added retrieval of data from the web application rather than the use of dummy data so the results are displayed in an aesthetically pleasing format rather than as JSON. The home page has remained in HTML as conversion is unnecessary.</p>
 											</div>
 										</div>
 									</li>
@@ -319,7 +319,7 @@
 												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> March 2014</small></p>
 											</div>
 											<div class="timeline-body">
-												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+												<p>Querying for the regular search can now be done through the home page search bar rather than through the URI as before. The similarity search can also be carried out by clicking the "View similar" button on individual results.</p>
 											</div>
 										</div>
 									</li>
@@ -331,7 +331,7 @@
 												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> March 2014</small></p>
 											</div>
 											<div class="timeline-body">
-												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+												<p>After meeting with our clients again, we decided to start work on the timeline that we planned to implement at the beginning of the project. At first, we looked at the <a href="http://d3js.org/">D3.js</a> but we then settled on using <a href="http://timeline.knightlab.com/">TimelineJS</a>./p>
 											</div>
 										</div>
 									</li>
@@ -343,7 +343,7 @@
 												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> March 2014</small></p>
 											</div>
 											<div class="timeline-body">
-												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+												<p>A basic timeline has been developed using the Hansard data. The next step is to implement this on the main application.</p>
 											</div>
 										</div>
 									</li>
@@ -354,7 +354,7 @@
 												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> April 2014</small></p>
 											</div>
 											<div class="timeline-body">
-												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+												<p>The view page has been added for when the user wants to click a result and view it in full in the context from which it was taken.</p>
 											</div>
 										</div>
 									</li>
@@ -366,7 +366,7 @@
 												<p><small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> April 2014</small></p>
 											</div>
 											<div class="timeline-body">
-												<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+												<p>In another client meeting with Sebastian and Yves we were told to try to optimise the searching functions in ElasticSearch. We optimised the searching by adding constraints to the data fields which the algorithm inspects and regular expression filtering to remove bad results.</p>
 											</div>
 										</div>
 									</li>
@@ -377,16 +377,36 @@
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-lg-11 col-lg-offset-1">
-				<h2 style="text-align: right;">Title 2</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan nec quam non fringilla. Phasellus nec consectetur nisi. Suspendisse sed nisi laoreet, condimentum mauris vitae, elementum felis. Cras mollis magna placerat ante porttitor semper. In at molestie sem. Phasellus nec enim mi. Pellentesque facilisis aliquet nulla, eget feugiat magna fringilla eu. Donec posuere ligula vitae est fringilla dapibus.<br>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce erat ligula, venenatis eget bibendum nec, viverra interdum purus. Nulla nec ipsum eget augue interdum faucibus. Praesent feugiat dui ac odio eleifend semper. Mauris vestibulum lectus ut tortor lacinia consequat. Cras vulputate posuere pretium. Vestibulum faucibus tincidunt facilisis. Curabitur bibendum ultricies nisl, id tristique urna congue et. Suspendisse eget consequat odio. Fusce ornare nulla et lorem interdum ultricies et eu erat. In aliquam vestibulum neque et tincidunt. Suspendisse elementum sapien quis dictum viverra. Suspendisse eget lorem auctor, lacinia arcu ut, volutpat dui. Sed ornare lectus sapien.
+		<div class="row" id="diagrams">
+			<div class="col-lg-11">
+				<h2>Architectural Diagrams</h2>
+				<div class="col-lg-11 col-lg-offset-1">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan nec quam non fringilla. Phasellus nec consectetur nisi. Suspendisse sed nisi laoreet, condimentum mauris vitae, elementum felis. Cras mollis magna placerat ante porttitor semper. In at molestie sem. Phasellus nec enim mi. Pellentesque facilisis aliquet nulla, eget feugiat magna fringilla eu. Donec posuere ligula vitae est fringilla dapibus.<br>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce erat ligula, venenatis eget bibendum nec, viverra interdum purus. Nulla nec ipsum eget augue interdum faucibus. Praesent feugiat dui ac odio eleifend semper. Mauris vestibulum lectus ut tortor lacinia consequat. Cras vulputate posuere pretium. Vestibulum faucibus tincidunt facilisis. Curabitur bibendum ultricies nisl, id tristique urna congue et. Suspendisse eget consequat odio. Fusce ornare nulla et lorem interdum ultricies et eu erat. In aliquam vestibulum neque et tincidunt. Suspendisse elementum sapien quis dictum viverra. Suspendisse eget lorem auctor, lacinia arcu ut, volutpat dui. Sed ornare lectus sapien.</p>
+				</div>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row" id="achievements">
 			<div class="col-lg-11">
-				<h2>Title 3</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan nec quam non fringilla. Phasellus nec consectetur nisi. Suspendisse sed nisi laoreet, condimentum mauris vitae, elementum felis. Cras mollis magna placerat ante porttitor semper. In at molestie sem. Phasellus nec enim mi. Pellentesque facilisis aliquet nulla, eget feugiat magna fringilla eu. Donec posuere ligula vitae est fringilla dapibus.<br>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce erat ligula, venenatis eget bibendum nec, viverra interdum purus. Nulla nec ipsum eget augue interdum faucibus. Praesent feugiat dui ac odio eleifend semper. Mauris vestibulum lectus ut tortor lacinia consequat. Cras vulputate posuere pretium. Vestibulum faucibus tincidunt facilisis. Curabitur bibendum ultricies nisl, id tristique urna congue et. Suspendisse eget consequat odio. Fusce ornare nulla et lorem interdum ultricies et eu erat. In aliquam vestibulum neque et tincidunt. Suspendisse elementum sapien quis dictum viverra. Suspendisse eget lorem auctor, lacinia arcu ut, volutpat dui. Sed ornare lectus sapien.
+				<h2>Technical Achievements</h2>
+				<div class="col-lg-11 col-lg-offset-1">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan nec quam non fringilla. Phasellus nec consectetur nisi. Suspendisse sed nisi laoreet, condimentum mauris vitae, elementum felis. Cras mollis magna placerat ante porttitor semper. In at molestie sem. Phasellus nec enim mi. Pellentesque facilisis aliquet nulla, eget feugiat magna fringilla eu. Donec posuere ligula vitae est fringilla dapibus.<br>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce erat ligula, venenatis eget bibendum nec, viverra interdum purus. Nulla nec ipsum eget augue interdum faucibus. Praesent feugiat dui ac odio eleifend semper. Mauris vestibulum lectus ut tortor lacinia consequat. Cras vulputate posuere pretium. Vestibulum faucibus tincidunt facilisis. Curabitur bibendum ultricies nisl, id tristique urna congue et. Suspendisse eget consequat odio. Fusce ornare nulla et lorem interdum ultricies et eu erat. In aliquam vestibulum neque et tincidunt. Suspendisse elementum sapien quis dictum viverra. Suspendisse eget lorem auctor, lacinia arcu ut, volutpat dui. Sed ornare lectus sapien.</p>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="patterns">
+			<div class="col-lg-11">
+				<h2>Design Patterns</h2>
+				<div class="col-lg-11 col-lg-offset-1">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan nec quam non fringilla. Phasellus nec consectetur nisi. Suspendisse sed nisi laoreet, condimentum mauris vitae, elementum felis. Cras mollis magna placerat ante porttitor semper. In at molestie sem. Phasellus nec enim mi. Pellentesque facilisis aliquet nulla, eget feugiat magna fringilla eu. Donec posuere ligula vitae est fringilla dapibus.<br>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce erat ligula, venenatis eget bibendum nec, viverra interdum purus. Nulla nec ipsum eget augue interdum faucibus. Praesent feugiat dui ac odio eleifend semper. Mauris vestibulum lectus ut tortor lacinia consequat. Cras vulputate posuere pretium. Vestibulum faucibus tincidunt facilisis. Curabitur bibendum ultricies nisl, id tristique urna congue et. Suspendisse eget consequat odio. Fusce ornare nulla et lorem interdum ultricies et eu erat. In aliquam vestibulum neque et tincidunt. Suspendisse elementum sapien quis dictum viverra. Suspendisse eget lorem auctor, lacinia arcu ut, volutpat dui. Sed ornare lectus sapien.</p>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="testing">
+			<div class="col-lg-11">
+				<h2>Testing and Evaluation</h2>
+				<div class="col-lg-11 col-lg-offset-1">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan nec quam non fringilla. Phasellus nec consectetur nisi. Suspendisse sed nisi laoreet, condimentum mauris vitae, elementum felis. Cras mollis magna placerat ante porttitor semper. In at molestie sem. Phasellus nec enim mi. Pellentesque facilisis aliquet nulla, eget feugiat magna fringilla eu. Donec posuere ligula vitae est fringilla dapibus.<br>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce erat ligula, venenatis eget bibendum nec, viverra interdum purus. Nulla nec ipsum eget augue interdum faucibus. Praesent feugiat dui ac odio eleifend semper. Mauris vestibulum lectus ut tortor lacinia consequat. Cras vulputate posuere pretium. Vestibulum faucibus tincidunt facilisis. Curabitur bibendum ultricies nisl, id tristique urna congue et. Suspendisse eget consequat odio. Fusce ornare nulla et lorem interdum ultricies et eu erat. In aliquam vestibulum neque et tincidunt. Suspendisse elementum sapien quis dictum viverra. Suspendisse eget lorem auctor, lacinia arcu ut, volutpat dui. Sed ornare lectus sapien.</p>
+				</div>
 			</div>
 		</div>
 	</div>
