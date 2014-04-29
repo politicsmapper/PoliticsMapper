@@ -16,18 +16,29 @@ block content
             .item.col-xs-4.col-lg-4
                 .thumbnail
                     .caption
-                        .row
-                            .col-xs-12.col-md-7
+                        .col-xs-12.col-md-7
+                            if current._source.speakername
                                 h4.group.inner.list-group-item-heading
-                                    | #{document.speakername}
-                            .col-xs-12.col-md-4
-                                p.lead(align='right')
-                                    | #{document.date}
-                        p.group.inner.list-group-item-text!=document["content-orig"]
-    script
+                                    | #{current._source.speakername}
+                        .col-xs-12.col-md-4
+                            p.lead(align='right')
+                                | #{current._source.date}
+                        for document in documents
+                            if document._source.id == current._source.id
+                                div#current
+                                    p.group.inner.list-group-item-text
+                                        b #{document._source.speakername}
+                                        !=document._source["content-orig"] 
+                            else
+                                p.group.inner.list-group-item-text
+                                    b #{document._source.speakername}
+                                    !=document._source["content-orig"] 
+
+                            
+    script.
         $(document).ready(function() {
-        $('#list').click(function(event){event.preventDefault();$('#products .item').addClass('list-group-item');});
-        $('#grid').click(function(event){event.preventDefault();$('#products .item').removeClass('list-group-item');$('#products .item').addClass('grid-group-item');});
+            $('#list').click(function(event){event.preventDefault();$('#products .item').addClass('list-group-item');});
+            $('#grid').click(function(event){event.preventDefault();$('#products .item').removeClass('list-group-item');$('#products .item').addClass('grid-group-item');});
         });
 
 
